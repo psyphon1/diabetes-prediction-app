@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Predictor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Diabetes Prediction Form</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <select name="gender" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Height (in cm)</label>
+                <input type="number" name="height" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Weight (in kg)</label>
+                <input type="number" name="weight" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Change in Weight (kg)</label>
+                <input type="number" name="change_in_weight" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Skin Thickness (mm)</label>
+                <input type="number" name="skin_thickness" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Blood Group</label>
+                <select name="blood_group" class="form-control">
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="O+">O+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="O-">O-</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Family History of Diabetes</label>
+                <select name="family_history" class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
